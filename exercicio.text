@@ -1,0 +1,25 @@
+algoritmo "HoraDeAcordar"
+    // Declaração de variáveis
+    var
+        horaDeDormir, horasDeSonoNecessarias, horaDeAcordar : inteiro
+
+    inicio
+        // Entrada de dados: hora em que a pessoa vai dormir
+        escreva("Digite a hora que você vai dormir (em formato 24h, ex: 22 para 10 PM): ")
+        leia(horaDeDormir)
+
+        // Entrada de dados: quantidade de horas de sono necessárias
+        escreva("Digite a quantidade de horas de sono necessárias: ")
+        leia(horasDeSonoNecessarias)
+
+        // Cálculo da hora de acordar
+        horaDeAcordar := horaDeDormir + horasDeSonoNecessarias
+
+        // Ajuste caso a hora de acordar ultrapasse 24 horas
+        se (horaDeAcordar >= 24) entao
+            horaDeAcordar := horaDeAcordar - 24
+        fimse
+
+        // Saída de dados: hora de acordar
+        escreva("Você deve acordar às ", horaDeAcordar, " horas.")
+    fimalgoritmo
